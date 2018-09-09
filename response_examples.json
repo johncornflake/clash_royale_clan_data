@@ -1,0 +1,27 @@
+{'url': "https://api.clashroyale.com/v1/clans/{clanID}"}
+
+{'badgeId': 12345678,
+ 'clanChestLevel': 12,
+ 'clanChestMaxLevel': 12,
+ 'clanChestPoints': 1234,
+ 'clanChestStatus': 'active/inactive',
+ 'clanScore': 12345,
+ 'description': 'Description',
+ 'donationsPerWeek': 12345,
+ 'location': {'id': 12345678, 'isCountry': True/False, 'name': 'International'},
+ 'memberList': [{'arena': {'id': 12345678, 'name': 'League Name},
+                 'clanChestPoints': 12,
+                 'clanRank': 1,
+                 'donations': 1234,
+                 'donationsReceived': 123,
+                 'expLevel': 12,
+                 'name': 'PlayerName',
+                 'previousClanRank': 1,
+                 'role': 'role',
+                 'tag': '#123AB4C5',
+                 'trophies': 1234}]
+ 'members': 12,
+ 'name': 'clanname',
+ 'requiredTrophies': 1234,
+ 'tag': '#1ABCDE',
+ 'type': 'open'}
