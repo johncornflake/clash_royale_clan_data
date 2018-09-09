@@ -68,7 +68,17 @@ create_tables = [{'table_name': 'clan_members',
                     current_favourite_card_max_level int,
                     UNIQUE KEY player_details_uk(tag, battle_count),
                     INDEX tag_idx (tag)
-                ) DEFAULT CHARSET=utf8;'''}
+                ) DEFAULT CHARSET=utf8;'''},
+                {'table_name': 'cards',
+                'sql': '''
+                CREATE TABLE IF NOT EXISTS cards (
+                    id int,
+                    name varchar(155),
+                    max_level int,
+                    icon_url varchar(1024),
+                    refreshed_at timestamp,
+                    PRIMARY KEY (id)
+                    ) DEFAULT CHARSET=utf8;'''}
                 ]
 
 def createTable(table_data):
