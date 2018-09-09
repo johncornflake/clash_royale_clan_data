@@ -30,9 +30,46 @@ create_tables = [{'table_name': 'clan_members',
                     donations_received int,
                     refreshed_at timestamp,
                     PRIMARY KEY (tag)
-                ) DEFAULT CHARSET=utf8
-                ;'''
-                },]
+                ) DEFAULT CHARSET=utf8;'''},
+                {'table_name': 'player_details',
+                'sql': '''
+                CREATE TABLE IF NOT EXISTS player_details (
+                	tag varchar(64),
+                    as_of_date DATE,
+                	name varchar(155),
+                	exp_level int,
+                	trophies int,
+                	arena_id int,
+                	arena_name varchar(64),
+                	bestTrophies int,
+                	wins int,
+                	losses int,
+                	battle_count int,
+                	three_crown_wins int,
+                	challenge_cards_won int,
+                	challenge_max_wins int,
+                    tournament_cards_won int,
+                    tournament_battle_count int,
+                    role varchar(64),
+                    donations int,
+                    donations_received int,
+                    total_donations int,
+                    war_day_wins int,
+                    clan_cards_collected int,
+                    current_league_trophies int,
+                    current_best_trophies int,
+                    previous_league_id varchar(64),
+                    previous_league_trophies int,
+                    previous_best_trophies int,
+                    best_season_id varchar(64),
+                    best_season_trophies int,
+                    best_season_best_trophies int,
+                    current_favourite_card_id int,
+                    current_favourite_card_max_level int,
+                    UNIQUE KEY player_details_uk(tag, battle_count),
+                    INDEX tag_idx (tag)
+                ) DEFAULT CHARSET=utf8;'''}
+                ]
 
 def createTable(table_data):
     table_name = table_data['table_name']

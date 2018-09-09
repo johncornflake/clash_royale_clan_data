@@ -6,11 +6,13 @@ import pandas as pd
 import pymysql as mysql
 from datetime import datetime
 import sys
+import warnings
 from pprint import pprint
 
 start_time = datetime.now()
 
 urlparse = urllib.parse.quote_plus
+warnings.filterwarnings('ignore', '*Duplicate entry*')
 
 import const_file
 
@@ -28,12 +30,19 @@ def doInsert(insert_data):
 
 def parseRow(row):
     r = []
+    try:
+        arena = row['arena']
+    except:
+        arena = None
     r.append(row.get('tag'))
     r.append(row.get('name'))
     r.append(row.get('expLevel'))
     r.append(row.get('trophies'))
-    r.append(row['arena'].get('id'))
-    r.append(row['arena'].get('name'))
+    if arena == None:
+        r.extend([None, None])
+    else:
+        r.append(arena.get('id'))
+        r.append(arena.get('name'))
     r.append(row.get('role'))
     r.append(row.get('clanRank'))
     r.append(row.get('previousClanRank'))
