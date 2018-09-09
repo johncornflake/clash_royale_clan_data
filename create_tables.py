@@ -78,7 +78,30 @@ create_tables = [{'table_name': 'clan_members',
                     icon_url varchar(1024),
                     refreshed_at timestamp,
                     PRIMARY KEY (id)
-                    ) DEFAULT CHARSET=utf8;'''}
+                    ) DEFAULT CHARSET=utf8;'''},
+                {'table_name': 'clan_information_log',
+                'sql': '''
+                CREATE TABLE IF NOT EXISTS clan_information_log (
+                    as_of_date DATE,
+                    tag varchar(64),
+                    name varchar(255),
+                    badge_id int,
+                    type varchar(255),
+                    clan_score int,
+                    required_trophies int,
+                    donations_per_week int,
+                    clan_chest_level int,
+                    clan_chest_max_level int,
+                    members int,
+                    location_id int,
+                    location_name varchar(255),
+                    location_is_country int,
+                    location_country_code varchar(64),
+                    description varchar(2048),
+                    clan_chest_status varchar(255),
+                    clan_chest_points int,
+                    UNIQUE KEY clan_information_uk (as_of_date)
+                ) DEFAULT CHARSET=uf8;'''}
                 ]
 
 def createTable(table_data):
