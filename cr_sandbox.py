@@ -13,9 +13,9 @@ def toCSV(data, name):
     file_name = name + '.csv'
     f.to_csv(file_name, index=False)
 
-import clashroyale_const
-token = clashroyale_const.token
-clan_tag = urlparse(clashroyale_const.elite_clan_tag)
+import const_file
+token = const_file.cr_token
+clan_tag = urlparse(const_file.clan_tag)
 headers = {'Authorization': "Bearer:" + token}
 base_url = 'https://api.clashroyale.com/v1/'
 

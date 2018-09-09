@@ -1,0 +1,8 @@
+cr_token = "thisstringisyourtokenbutit'sprobablyalotlongerthanthisunlessikeeptyping"
+clan_tag = "#9ABCDE"
+
+# database information
+db_host = "thisis.yourdatabasehost.com"
+db_username = "username"
+db_password = "stupidpassword"
+db_schema = "whateveryoucalltheschema"
