@@ -32,6 +32,10 @@ def parseRow(row):
         location = row['location']
     except:
         location = None
+    if row.get('isCountry') == 'False':
+        isCountry = 0
+    else:
+        isCountry = 1
     r.append(row.get('tag'))
     r.append(row.get('name'))
     r.append(row.get('badgeId'))
@@ -47,7 +51,7 @@ def parseRow(row):
     else:
         r.append(location.get('id'))
         r.append(location.get('name'))
-        r.append(str(location.get('isCountry')))
+        r.append(isCountry)
         r.append(location.get('name'))
     r.append(row.get('description'))
     r.append(row.get('clanChestStatus'))
@@ -64,7 +68,8 @@ VALUES (CURDATE(),%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);
 db_cxn = mysql.connect(host=const_file.db_host,
                         user=const_file.db_username,
                         password=const_file.db_password,
-                        db=const_file.db_schema)
+                        db=const_file.db_schema,
+                        charset="utf8mb4")
 
 clan_tag = urlparse(const_file.clan_tag)
 headers = const_file.headers

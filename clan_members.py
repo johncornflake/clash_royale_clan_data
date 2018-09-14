@@ -6,13 +6,11 @@ import pandas as pd
 import pymysql as mysql
 from datetime import datetime
 import sys
-import warnings
 from pprint import pprint
 
 start_time = datetime.now()
 
 urlparse = urllib.parse.quote_plus
-warnings.filterwarnings('ignore', '*Duplicate entry*')
 
 import const_file
 
