@@ -62,7 +62,8 @@ VALUES (%s, %s, %s, %s, %s, %s, %s, now());
 db_cxn = mysql.connect(host=const_file.db_host,
                         user=const_file.db_username,
                         password=const_file.db_password,
-                        db=const_file.db_schema)
+                        db=const_file.db_schema
+                        charset="utf8mb4"))
 
 clan_tag = urlparse(const_file.clan_tag)
 headers = const_file.headers
