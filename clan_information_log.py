@@ -12,6 +12,8 @@ start_time = datetime.now()
 
 urlparse = urllib.parse.quote_plus
 
+rootDir = os.path.dirname(os.path.realpath(__file__))
+sys.path.insert(0, rootDir)
 import const_file
 
 def doInsert(insert_data):
