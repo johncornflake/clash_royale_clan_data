@@ -6,6 +6,7 @@ import pandas as pd
 import pymysql as mysql
 from datetime import datetime
 import sys
+import os
 from pprint import pprint
 
 start_time = datetime.now()
