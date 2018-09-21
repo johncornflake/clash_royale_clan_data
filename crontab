@@ -1,7 +1,7 @@
 #PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 #LD_LIBRARY_PATH=/usr/local/lib
 
-* 0 * * * ~/clash_royale_clan_data/clan_information_log.py >> ~/logs/clan_information_log.log 2>&1
+*/1 0 * * * cd ~/clash_royale_clan_data; python clan_information_log.py >> ~/logs/clan_information_log.log 2>&1
 * */8 * * * ~/clash_royale_clan_data/war_log_players.py >> ~/logs/war_log_players.log 2>&1
 * */12 * * * ~/clash_royale_clan_data/clan_war_log.py >> ~/logs/clan_war_log.log 2>&1
 * */8 * * * ~/clash_royale_clan_data/clan_information_log.py >> ~/logs/clan_information_log.log 2>&1
