@@ -61,7 +61,7 @@ def parseRow(row):
 
 insert_query = '''
 INSERT IGNORE INTO clan_information_log
-VALUES (CURDATE(),%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);
+VALUES (CURDATE(),%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, NOW());
 '''
 
 # database connection and other variables from const_file

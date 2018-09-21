@@ -100,6 +100,7 @@ create_tables = [{'table_name': 'clan_members',
                     description varchar(2048),
                     clan_chest_status varchar(255),
                     clan_chest_points int,
+                    refreshed_at timestamp,
                     UNIQUE KEY clan_information_uk (as_of_date)
                 ) DEFAULT CHARACTER SET=utf8mb4 COLLATE utf8mb4_bin;'''},
                 {'table_name': 'war_log_players',
