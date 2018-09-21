@@ -1,4 +1,4 @@
-#!usr/bin/Python3
+#!usr/bin/python
 
 from pprint import pprint
 import requests

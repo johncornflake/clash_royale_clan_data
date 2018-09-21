@@ -1,4 +1,4 @@
-#!usr/bin/Python3
+#!usr/bin/python
 
 import pymysql as mysql
 import sys

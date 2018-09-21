@@ -1,4 +1,4 @@
-#!usr/bin/Python3
+#!usr/bin/python
 
 import requests
 import urllib.parse
