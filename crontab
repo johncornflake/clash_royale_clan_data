@@ -1,4 +1,4 @@
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 LD_LIBRARY_PATH=/usr/local/lib
 
-0 12 * * * ~/clash_royale_clan_data/clan_information_log.py >> ~/logs/clan_information_log.log 2>&1
+/1 * * * * ~/clash_royale_clan_data/clan_information_log.py >> ~/logs/clan_information_log.log 2>&1
