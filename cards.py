@@ -47,8 +47,8 @@ truncate_query = 'TRUNCATE cards;'
 db_cxn = mysql.connect(host=const_file.db_host,
                         user=const_file.db_username,
                         password=const_file.db_password,
-                        db=const_file.db_schema
-                        charset="utf8mb4"))
+                        db=const_file.db_schema,
+                        charset="utf8mb4")
 
 headers = const_file.headers
 base_url = const_file.base_url
