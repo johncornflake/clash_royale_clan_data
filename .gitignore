@@ -1,3 +1,4 @@
 const_file.py
 __pycache__
 connect_to_aws_server.txt
+amazon_aws.pem
